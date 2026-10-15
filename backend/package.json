@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Agenda académica digital - API y servidor de la aplicación",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --ext js,mjs,json --ignore uploads app.js",
+    "migrar": "node database/migrar.mjs",
+    "migrar:revertir": "node database/migrar.mjs revertir",
+    "migrar:estado": "node database/migrar.mjs estado",
+    "crear-usuario": "node scripts/crear-usuario.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "probar-correo": "node scripts/probar-correo.mjs",
+    "generar-paginas": "node scripts/generar-paginas.mjs",
+    "configurar-google": "node scripts/configurar-google.mjs",
+    "configurar-correo": "node scripts/configurar-correo.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "google-auth-library": "^11.3.0",
+    "mysql2": "^3.24.5",
+    "nodemailer": "^10.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

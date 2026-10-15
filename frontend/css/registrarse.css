@@ -1,0 +1,285 @@
+/* Fondo */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+/* Ventana */
+.registro{
+    width:400px;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+/* Título */
+.registro h2{
+    margin-bottom:25px;
+    color:#1f2937;
+    font-size:30px;
+}
+
+/* Grupo de cada campo */
+.input-box{
+    margin-bottom:18px;
+}
+
+/* Campos */
+.input-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.3);
+}
+
+/* Botón */
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* Enlace */
+.registro p{
+    margin-top:20px;
+    color:#555;
+}
+
+.registro a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.registro a:hover{
+    text-decoration:underline;
+}
+
+/* Footer */
+.redes-sociales{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1f2937;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 -3px 10px rgba(0,0,0,.2);
+    z-index: 1000;
+}
+
+/* Iconos */
+.redes-sociales a{
+    color: white;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.redes-sociales a:hover{
+    color: #3b82f6;
+    transform: scale(1.2);
+}
+
+/* Botón para volver al inicio */
+.boton-inicio{
+    position:fixed;
+    top:20px;
+    left:20px;
+    padding:10px 22px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+    transition:0.3s;
+}
+
+.boton-inicio:hover{
+    background:#2563eb;
+    color:white;
+}
+
+
+/* Mensajes de validación */
+.mensaje{
+    display:none;
+    margin:0 0 15px;
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:14px;
+    text-align:left;
+}
+
+.mensaje.error{
+    display:block;
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.mensaje.ok{
+    display:block;
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.input-box input.invalido{
+    border-color:#dc2626;
+}
+
+
+/* Ojito para mostrar la contraseña */
+.input-box.con-ojo{
+    position:relative;
+}
+
+.input-box.con-ojo input{
+    padding-right:48px;
+}
+
+.ojo-password{
+    position:absolute;
+    top:50%;
+    right:8px;
+    transform:translateY(-50%);
+    width:auto;
+    padding:6px;
+    margin:0;
+    background:none;
+    border:none;
+    border-radius:50%;
+    color:#6b7280;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+}
+
+.ojo-password:hover{
+    background:none;
+    color:#2563eb;
+    transform:translateY(-50%);
+}
+
+
+/* Elección de rol */
+.rol-eleccion{
+    border:none;
+    margin:0 0 18px;
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.rol-eleccion legend{
+    width:100%;
+    margin-bottom:10px;
+    font-weight:bold;
+    color:#1e3a8a;
+    text-align:left;
+}
+
+.rol-opcion{
+    display:block;
+    cursor:pointer;
+}
+
+.rol-opcion input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.rol-tarjeta{
+    display:grid;
+    gap:4px;
+    height:100%;
+    padding:12px;
+    border:2px solid #cbd5e1;
+    border-radius:12px;
+    text-align:left;
+    transition:.2s;
+}
+
+.rol-tarjeta strong{
+    color:#1e3a8a;
+    font-size:15px;
+}
+
+.rol-tarjeta small{
+    color:#64748b;
+    font-size:12px;
+}
+
+.rol-opcion input:checked + .rol-tarjeta{
+    border-color:#2563eb;
+    background:#dbeafe;
+    box-shadow:0 0 0 3px rgba(37,99,235,.2);
+}
+
+.rol-opcion input:focus-visible + .rol-tarjeta{
+    outline:3px solid #f59e0b;
+}
+
+.nota-rol{
+    margin:-6px 0 16px;
+    padding:10px 12px;
+    border-radius:8px;
+    background:#dbeafe;
+    color:#1e3a8a;
+    font-size:13px;
+    text-align:left;
+}
+
+@media (max-width:480px){
+    .rol-eleccion{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ---------- Continuar con Google ---------- */
+.boton-google { display: flex; justify-content: center; margin: 0 0 .9rem; min-height: 44px; }
+.separador-google { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; color: #64748b; font-size: .85rem; }
+.separador-google::before, .separador-google::after { content: ""; flex: 1; height: 1px; background: #d5deef; }
+.fila-grado { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.ayuda-registro { margin: -.2rem 0 .8rem; font-size: .8rem; color: #64748b; }
+.nota-rol { margin: 0 0 1rem; font-size: .92rem; color: #1e3a8a; }
+
+.boton-google-reserva { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; width: 300px; max-width: 100%; height: 44px; border: 1px solid #d0d7e6; border-radius: 999px; background: #fff; color: #1e2b4d; font-weight: 600; font-size: .95rem; cursor: pointer; }
+.boton-google-reserva:hover { background: #f3f7ff; border-color: #2563eb; }
+

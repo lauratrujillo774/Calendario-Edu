@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4fb8fe,#006efe);
+}
+
+.login-container{
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.login-container h2{
+    margin-bottom:25px;
+    color:#333;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#f1f1f1;
+    font-size:16px;
+}
+
+.input-box input:focus{
+    outline:none;
+    border:2px solid #4facfe;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#4facfe;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+   background:#008cff;
+    transform:scale(1.03);
+}
+
+.extra{
+    margin-top:15px;
+    color:#666;
+}
+
+.extra a{
+    color:#4facfe;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.extra a:hover{
+    text-decoration:underline;
+}
+
+/* Botón para volver al inicio */
+.boton-inicio{
+    position:fixed;
+    top:20px;
+    left:20px;
+    padding:10px 22px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+    transition:0.3s;
+}
+
+.boton-inicio:hover{
+    background:#2563eb;
+    color:white;
+}
+
+
+/* Ojito para mostrar la contraseña */
+.input-box.con-ojo{
+    position:relative;
+}
+
+.input-box.con-ojo input{
+    padding-right:48px;
+}
+
+.ojo-password{
+    position:absolute;
+    top:50%;
+    right:8px;
+    transform:translateY(-50%);
+    width:auto;
+    padding:6px;
+    margin:0;
+    background:none;
+    border:none;
+    border-radius:50%;
+    color:#6b7280;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+}
+
+.ojo-password:hover{
+    background:none;
+    color:#2563eb;
+    transform:translateY(-50%);
+}
+
+
+/* Mensajes */
+.mensaje{
+    display:none;
+    margin:0 0 15px;
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:14px;
+    text-align:left;
+}
+
+.mensaje.error{
+    display:block;
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.mensaje.ok{
+    display:block;
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* ---------- Continuar con Google ---------- */
+.boton-google { display: flex; justify-content: center; margin: 0 0 .9rem; min-height: 44px; }
+.separador-google { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; color: #64748b; font-size: .85rem; }
+.separador-google::before, .separador-google::after { content: ""; flex: 1; height: 1px; background: #d5deef; }
+.fila-grado { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.ayuda-registro { margin: -.2rem 0 .8rem; font-size: .8rem; color: #64748b; }
+.nota-rol { margin: 0 0 1rem; font-size: .92rem; color: #1e3a8a; }
+
+.boton-google-reserva { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; width: 300px; max-width: 100%; height: 44px; border: 1px solid #d0d7e6; border-radius: 999px; background: #fff; color: #1e2b4d; font-weight: 600; font-size: .95rem; cursor: pointer; }
+.boton-google-reserva:hover { background: #f3f7ff; border-color: #2563eb; }
+

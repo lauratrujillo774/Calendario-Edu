@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/registrarse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <a class="boton-inicio" href="pagina-principal.html">← Inicio</a>
+       
+    <form class="registro" id="formRegistro">
+    <h2>Crear Cuenta</h2>
+
+    <p class="nota-rol">Cuenta de <strong>estudiante</strong>: organiza tus tareas, exámenes, calificaciones y estudio.</p>
+
+    <div id="botonGoogleRegistro" class="boton-google"></div>
+    <p class="separador-google" id="separadorGoogle"><span>o crea tu cuenta con tu correo</span></p>
+
+    <div class="input-box">
+        <input type="text" id="nombres" placeholder="Nombres" autocomplete="given-name">
+    </div>
+
+    <div class="input-box">
+        <input type="text" id="apellidos" placeholder="Apellidos" autocomplete="family-name">
+    </div>
+
+    <div class="input-box">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+    </div>
+
+    <div class="fila-grado">
+        <div class="input-box">
+            <input type="number" id="grado" min="0" max="11" placeholder="Grado (0 a 11)" aria-label="Grado que cursas, de 0 (Transición) a 11">
+        </div>
+        <div class="input-box">
+            <input type="number" id="grupo" min="1" max="30" placeholder="Grupo (1, 2…)" aria-label="Grupo">
+        </div>
+    </div>
+    <p class="ayuda-registro">El grado y el grupo son opcionales: puedes escribirlos ahora o después, en Configuración. Ejemplo: grado 11, grupo 1.</p>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="Contraseña">
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="confirmar" placeholder="Confirmar contraseña">
+    </div>
+
+    <p id="mensaje" class="mensaje" role="alert"></p>
+
+    <button type="submit">Registrarse</button>
+
+    <p>¿Ya tienes una cuenta? <a href="inicio-sesion.html">Inicia sesión</a></p>
+</form>
+
+<footer class="redes-sociales">
+
+    <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="https://www.youtube.com" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.tiktok.com" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+</footer>
+
+<script src="../js/ojo-password.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/registrarse.js"></script>
+<script src="../js/google.js"></script>
+<script>iniciarGoogle("botonGoogleRegistro", "signup_with", "separadorGoogle");</script>
+
+</body>
+</html>
