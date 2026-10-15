@@ -1,0 +1,49 @@
+# Despliegue en Render (Blueprint): New + → Blueprint → elige este repositorio.
+# Los valores con sync:false los escribes tú en el panel de Render (son secretos o dependen de tu cuenta).
+services:
+  - type: web
+    name: educal
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm ci --omit=dev
+    startCommand: cd backend && node app.js
+    healthCheckPath: /api/auth/config
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: MYSQL_ZONA_HORARIA
+        value: "-05:00"
+      - key: MYSQL_SSL
+        value: "true"
+      - key: MYSQL_HOST
+        sync: false
+      - key: MYSQL_PORT
+        sync: false
+      - key: MYSQL_DATABASE
+        sync: false
+      - key: MYSQL_USER
+        sync: false
+      - key: MYSQL_PASSWORD
+        sync: false
+      - key: MYSQL_SSL_CA
+        sync: false
+      - key: URL_APP
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: CORREO_ACTIVO
+        value: "true"
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_SEGURO
+        sync: false
+      - key: SMTP_USUARIO
+        sync: false
+      - key: SMTP_CLAVE
+        sync: false
+      - key: CORREO_REMITENTE
+        sync: false

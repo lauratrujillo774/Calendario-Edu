@@ -7,6 +7,8 @@
     "start": "node app.js",
     "dev": "nodemon --ext js,mjs,json --ignore uploads app.js",
     "migrar": "node database/migrar.mjs",
+    "exportar-esquema": "node scripts/exportar-esquema-mysql.mjs",
+    "importar-bd": "node scripts/importar-bd.mjs",
     "migrar:revertir": "node database/migrar.mjs revertir",
     "migrar:estado": "node database/migrar.mjs estado",
     "crear-usuario": "node scripts/crear-usuario.mjs",
